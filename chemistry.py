@@ -7,6 +7,7 @@ def isNumber(s):
         return False
 
 #숫자를 자르는 함수
+#문자열을 읽으면서 숫자가 나오면 그 앞뒤를 자르는 함수
 def numsplit(a) : 
     cnt = 0
     number = []
@@ -26,6 +27,8 @@ def numsplit(a) :
     return after_sp
 
 #원소를 자르는 함수
+#원소기호는 대문자로 시작하기 때문에 문자열을 읽다가 대문자가 나오면 그 앞을 잘라주는 함수
+#ex) AaA -> Aa/A , AAA -> A/A/A
 def wordsplit(a) :
     cnt = 0
     number = []
@@ -49,7 +52,7 @@ def wordsplit(a) :
             cnt = cnt + 1
     return after_sp
 
-#원소를 쪼개주는 함수(최종)
+#원소를 쪼개주는 함수(최종) -> numsplit + wordsplit
 def atomix(a) :
     atom = []
     flag = True
